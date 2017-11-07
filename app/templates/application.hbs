@@ -1,6 +1,20 @@
 <div class="container">
 
-<h1>Coffee Now</h1>
+<h1 id="pageTitle">Coffee, Now!</h1>
+<h3 id="pageDescription">Order your favorite cup of joe straight to your location</h3>
+
+{{input type="text" value=searchTerm placeholder='Seach for a coffee shop near you' }}
+
+<div class="row">
+    {{shop-view}}
+    {{shop-view}}
+    {{shop-view}}
+    {{shop-view}}
+    {{shop-view}}
+    {{shop-view}}
+    {{shop-view}}
+    {{shop-view}}
+</div>
 
 {{outlet}}
 </div>
