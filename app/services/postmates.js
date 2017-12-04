@@ -2,6 +2,7 @@ import Ember from 'ember';
 import $ from 'jquery';
 
 export default Ember.Service.extend({
+	toast: Ember.inject.service(),
 	getDeliveryTime(pickupAddr, deliveryAddr) {
 		$.ajax({
 				url: "https://api.postmates.com/v1/customers/cus_LV3iQljOY8vQOV/delivery_quotes",
@@ -20,6 +21,10 @@ export default Ember.Service.extend({
 			})
 			.then(function(data) {
 				return data.dropoff_eta;
+			})
+			.fail(function(data) {
+				var toast = this.get('toast');
+				toast.error('You have an API error!', 'Uh oh!');
 			});
 	}
 });

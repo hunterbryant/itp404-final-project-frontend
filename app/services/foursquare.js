@@ -2,6 +2,7 @@ import Ember from 'ember';
 import $ from 'jquery';
 
 export default Ember.Service.extend({
+	toast: Ember.inject.service(),
 	findNearestShops(latlng, query) {
 		return $.ajax({
 				url: "https://api.foursquare.com/v2/venues/search",
@@ -26,6 +27,10 @@ export default Ember.Service.extend({
 			})
 			.then(function(data) {
 				return data.response.venues;
+			})
+			.fail(function(data) {
+				var toast = this.get('toast');
+				toast.error('You have an API error!', 'Uh oh!');
 			});
 	}
 });

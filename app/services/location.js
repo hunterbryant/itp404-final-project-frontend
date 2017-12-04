@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
+	toast: Ember.inject.service(),
 	geolocation: Ember.inject.service(),
 	gMap: Ember.inject.service(),
 	userLocation: {
@@ -29,6 +30,8 @@ export default Ember.Service.extend({
 					});
 					callback(this.get('userLocation'));
 					this.set('updatedLocation', true);
+					var toast = this.get('toast');
+					toast.success(`You have been located at ${templat}, ${templng}`);
 				});
 		}.bind(this));
 	}
