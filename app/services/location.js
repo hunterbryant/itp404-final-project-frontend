@@ -7,7 +7,7 @@ export default Ember.Service.extend({
 		// Default values
 		lat: 34.21,
 		lng: -118.04,
-		addr: "Loading delivery address.."
+		addr: "Loading current address.."
 	},
 	updatedLocation: false,
 	getUserLocation(callback) {

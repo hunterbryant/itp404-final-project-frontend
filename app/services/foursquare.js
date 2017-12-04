@@ -14,7 +14,8 @@ export default Ember.Service.extend({
 					"query": `${query}`,
 					"limit": "10",
 					"v": "20171203",
-					"categoryId": "4bf58dd8d48988d1e0931735"
+					"categoryId": "4bf58dd8d48988d1e0931735",
+					//	"open_now": "true"
 				},
 				dataType: 'jsonp',
 				headers: {

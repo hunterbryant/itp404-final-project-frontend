@@ -9,6 +9,13 @@ const Router = Ember.Router.extend({
 Router.map(function() {
 	this.route('search', {
 		path: 'search/:keywords'
+	}, function() {
+		this.route('info', {
+			path: 'info/:id'
+		});
+	});
+	this.route('not-found', {
+		path: '/*path'
 	});
 });
 

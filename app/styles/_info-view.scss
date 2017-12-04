@@ -2,30 +2,22 @@
 @import 'fonts';
 @import 'variables';
 
-.shop-view {
+.moreInfoContainer {
 	display: flex;
-	height: 83px;
 	flex-direction: row;
+	padding-left: 12px;
+	padding-right: 12px;
 	background-color: $light-grey;
 	border-color: $medium-grey;
 	border-radius: $rounding;
 	border-width: 1px;
 	border-style: solid;
 	margin-bottom: 24px;
+	margin-left: 12px;
+	margin-right: 12px;
 	padding: 15px 24px;
 	overflow: hidden;
 	transition: all 0.2s ease-in-out;
-
-	&:hover {
-		outline: none;
-		text-decoration: none;
-		border-color: $off-black;
-		transition: all 0.2s ease-in-out;
-	}
-
-	&:active {
-		text-decoration: none;
-	}
 
 	.left-column {
 		flex: 2 0 0;
@@ -68,9 +60,4 @@
 			padding-bottom: 14px;
 		}
 	}
-}
-
-.col-sm-6 {
-	padding-left: 12px;
-	padding-right: 12px;
 }

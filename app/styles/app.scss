@@ -3,6 +3,7 @@
 @import 'fonts';
 @import 'variables';
 @import 'shop-view';
+@import 'info-view';
 @import 'loader';
 
 body,
@@ -48,9 +49,19 @@ h3 {
 	line-height: 1.5;
 }
 
+#map {
+	height: 300px;
+	margin-bottom: 24px;
+}
+
 i {
 	vertical-align: top;
 	margin-right: 5px;
+}
+
+.infoContainer {
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 form {

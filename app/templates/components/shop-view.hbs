@@ -1,11 +1,13 @@
 <div class="col-sm-6">
-    <div class="shop-view">
-        <div class="left-column">
-            <h3>{{shop.name}}</h3>
-            <p>{{shop.location.address}}</p>
-        </div>
-        <div class="right-column">
-            <p>{{format-distance shop.location.distance}}</p>
-        </div>
-    </div>
+	{{#link-to "search.info" shop.id}}
+	    <div class="shop-view">
+	        <div class="left-column">
+	            <h3>{{shop.name}}</h3>
+	            <p>{{shop.location.address}}</p>
+	        </div>
+	        <div class="right-column">
+	            <p>{{format-distance shop.location.distance}}</p>
+	        </div>
+	    </div>
+	{{/link-to}}
 </div>

@@ -1,18 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+	title: function(tokens) {
+		return tokens.join(' - ') + ' - Coffee Now';
+	},
 	location: Ember.inject.service(),
 	userLocation: {
 		// Default values
-		lat: 34.21,
-		lng: -118.04,
+		lat: 34.07,
+		lng: -118.3,
 		addr: "Loading delivery address.."
 	},
 	actions: {
 		setLocation() {
 			this.get('location').getUserLocation(function(response) {
 				this.set('userLocation', response);
-				console.log(this.get('userLocation'));
+				console.log(response);
 			}.bind(this));
 		},
 		searchForShops(event) {

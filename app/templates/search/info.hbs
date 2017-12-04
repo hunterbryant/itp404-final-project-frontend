@@ -1,0 +1,27 @@
+<div class="moreInfoContainer">
+	<div class="left-column">
+	    <h2>
+	        {{model.name}}
+	    </h2>
+
+	    <a href={{model.url}} target="_blank">Website</a><br />
+		{{#if model.contact.phone}}
+			Phone: {{model.contact.phone}}<br />
+		{{/if}}
+		{{#if model.location.address}}
+			Address: {{model.location.address}}<br />
+		{{/if}}
+		{{#if model.price}}
+			Price: {{model.price}}<br />
+		{{/if}}
+		{{#if model.photos}}
+			Photos<br />
+		{{/if}}
+	</div>
+	<div class="right-column">
+		<p>{{format-distance model.location.distance}}</p>
+	</div>
+
+</div>
+
+{{outlet}}

@@ -1,7 +1,9 @@
+{{outlet}}
+
 {{#each model as |shop|}}
     {{shop-view shop=shop}}
 {{else}}
-    No coffee shops around :(
+<div class="infoContainer">
+    No coffee shops are open under your search :(
+</div>
 {{/each}}
-
-{{outlet}}

@@ -1,8 +1,9 @@
 import Ember from 'ember';
+import $ from 'jquery';
 
 export default Ember.Service.extend({
 	getDeliveryTime(pickupAddr, deliveryAddr) {
-		jQuery.ajax({
+		$.ajax({
 				url: "https://api.postmates.com/v1/customers/cus_LV3iQljOY8vQOV/delivery_quotes",
 				type: "POST",
 				headers: {

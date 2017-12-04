@@ -1,11 +1,13 @@
 <div class="container">
 
-<h1 id="pageTitle">Coffee, Now!</h1>
-<h3 id="pageDescription">Order your favorite cup of joe straight to your location</h3>
+{{#link-to "index"}}
+	<h1 id="pageTitle">Coffee, Now!</h1>
+{{/link-to}}
+<h3 id="pageDescription">Find the closest coffee shops open now</h3>
 <p id="currentLocation"><i class="material-icons">location_on</i>{{userLocation.addr}}</p>
 
 <form onsubmit={{action "searchForShops"}}>
-    {{input type="text" insert-newline="insertNewline" value=searchTerm placeholder='Seach for a coffee shop near you' }}
+    {{input name="title" type="text" insert-newline="insertNewline" value=searchTerm placeholder='Seach for a coffee shop near you' }}
     <button id="submit-button" type="submit">Search</button>
 </form>
 
