@@ -1,11 +1,11 @@
 <div class="col-sm-6">
     <div class="shop-view">
         <div class="left-column">
-            <h3>Starbucks</h3>
-            <p>3452 Washington Ave</p>
+            <h3>{{shop.name}}</h3>
+            <p>{{shop.location.address}}</p>
         </div>
         <div class="right-column">
-            <p>$4.56</p>
+            <p>{{format-distance shop.location.distance}}</p>
         </div>
     </div>
 </div>

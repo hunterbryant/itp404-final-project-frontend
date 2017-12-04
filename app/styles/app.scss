@@ -3,73 +3,95 @@
 @import 'fonts';
 @import 'variables';
 @import 'shop-view';
+@import 'loader';
 
 body,
 html {
-  background-color: $off-white;
-  height: 100vh;
-  font-family: $ui-font-family;
-  font-size: 16px;
+	background-color: $off-white;
+	height: 100vh;
+	font-family: $ui-font-family;
+	font-size: 16px;
 }
 
 .container {
-  margin: auto;
-  padding: 0 24px;
-  max-width: 750px;
+	margin: auto;
+	padding: 0 24px;
+	max-width: 750px;
 }
 
 h1 {
-  color: $off-black;
-  margin-top: 56px;
-  margin-bottom: 8px;
-  font-weight: 400;
-  font-size: 2.25em;
-  letter-spacing: 0.0225em;
+	color: $off-black;
+	margin-top: 56px;
+	margin-bottom: 8px;
+	font-weight: 400;
+	font-size: 2.25em;
+	letter-spacing: 0.0225em;
 }
 
 h3 {
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 1.125em;
-  font-weight: 400;
-  color: $dark-grey;
-  letter-spacing: 0.01125em;
-  line-height: 1.5;
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 1.125em;
+	font-weight: 400;
+	color: $dark-grey;
+	letter-spacing: 0.01125em;
+	line-height: 1.5;
 }
 
-input[type="text"] {
-  background-color: $light-grey;
-  border-color: $medium-grey;
-  border-radius: $rounding;
-  border-width: 1px;
-  border-style: solid;
-  display: block;
-  margin-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
-  height: 56px;
-  width: 100%;
+#currentLocation {
+	margin-top: 0;
+	margin-bottom: 24px;
+	font-size: 1em;
+	font-weight: 400;
+	color: $medium-grey;
+	letter-spacing: 0.01125em;
+	line-height: 1.5;
+}
 
-  font-size: 1.125em;
-  letter-spacing: 0.01125em;
+i {
+	vertical-align: top;
+	margin-right: 5px;
+}
 
-  &::placeholder {
-    color: $medium-grey;
-  }
+form {
+	input[type="text"] {
+		background-color: $light-grey;
+		border-color: $medium-grey;
+		border-radius: $rounding;
+		border-width: 1px;
+		border-style: solid;
+		display: block;
+		margin-bottom: 24px;
+		padding-left: 24px;
+		padding-right: 24px;
+		height: 56px;
+		width: 100%;
 
-  &:focus {
-    outline: none;
-    border-color: $off-black;
-    transition: all 0.3s ease-in-out;
-  }
+		font-size: 1.125em;
+		letter-spacing: 0.01125em;
 
-  &:not(:focus) {
-    border-color: $medium-grey;
-    transition: all 0.3s ease-in-out;
-  }
+		&::placeholder {
+			color: $dark-grey;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: $off-black;
+			transition: all 0.2s ease-in-out;
+		}
+
+		&:not(:focus) {
+			border-color: $medium-grey;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+
+	button {
+		display: none;
+	}
 }
 
 .row {
-  padding-left: 3px;
-  padding-right: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
 }

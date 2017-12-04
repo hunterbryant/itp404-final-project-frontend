@@ -2,19 +2,15 @@
 
 <h1 id="pageTitle">Coffee, Now!</h1>
 <h3 id="pageDescription">Order your favorite cup of joe straight to your location</h3>
+<p id="currentLocation"><i class="material-icons">location_on</i>{{userLocation.addr}}</p>
 
-{{input type="text" value=searchTerm placeholder='Seach for a coffee shop near you' }}
+<form onsubmit={{action "searchForShops"}}>
+    {{input type="text" insert-newline="insertNewline" value=searchTerm placeholder='Seach for a coffee shop near you' }}
+    <button id="submit-button" type="submit">Search</button>
+</form>
 
 <div class="row">
-    {{shop-view}}
-    {{shop-view}}
-    {{shop-view}}
-    {{shop-view}}
-    {{shop-view}}
-    {{shop-view}}
-    {{shop-view}}
-    {{shop-view}}
+	{{outlet}}
 </div>
 
-{{outlet}}
 </div>
